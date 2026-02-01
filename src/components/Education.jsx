@@ -40,7 +40,7 @@ const Education = () => {
                     <div className="relative bg-white w-24 h-24 rounded-3xl flex items-center justify-center shadow-2xl shadow-primary-500/30 transform group-hover:scale-110 transition-all duration-500 overflow-hidden p-3">
                       {!logoError ? (
                         <img 
-                          src="/university_logo.png" 
+                          src={`${import.meta.env.BASE_URL}university_logo.png`}
                           alt="University of Pécs Logo" 
                           className="w-full h-full object-contain"
                           onError={() => setLogoError(true)}

@@ -28,7 +28,7 @@ const Hero = () => {
                 {/* Photo - Add your photo to /public/profile-photo.jpg */}
                 {!imageError ? (
                   <img 
-                    src="/profile-photo.jpg" 
+                    src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
                     alt="Aminu Iliyasu" 
                     className="w-full h-full object-cover relative z-10 rounded-full"
                     style={{ objectPosition: 'center 30%' }}
