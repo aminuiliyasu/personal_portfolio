@@ -1,8 +1,16 @@
 import React from 'react'
-import { FaUniversity, FaUsers, FaHandshake, FaCode } from 'react-icons/fa'
+import { FaUniversity, FaUsers, FaHandshake, FaCode, FaRocket } from 'react-icons/fa'
 
 const Activities = () => {
   const activities = [
+    {
+      organization: 'MIK Hub',
+      role: 'Founding Member',
+      period: '2025 - 2026',
+      icon: <FaRocket className="text-white" size={24} />,
+      gradient: 'from-primary-400 to-primary-500',
+      bg: 'from-primary-400/20 to-primary-500/20'
+    },
     {
       organization: 'University of Pécs',
       role: 'International Student Ambassador',

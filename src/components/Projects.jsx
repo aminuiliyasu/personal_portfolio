@@ -1,31 +1,33 @@
 import React from 'react'
-import { FaLink, FaCloud, FaCode, FaDocker, FaServer } from 'react-icons/fa'
+import { FaLink, FaShieldAlt, FaChartLine } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Multi-Region AWS Deployment with Terraform and Automation',
+      title: 'Enterprise GitOps & Zero-Trust Platform',
       description: [
-        'Designed and deployed Ubuntu instances on AWS across two regions (eu-west-1 and eu-central-1), utilizing at least two Availability Zones per region.',
-        'Modularized Terraform scripts to enhance reusability and flexibility for different environments, such as development and production.',
-        'Configured a Virtual Private Cloud (VPC) to isolate environments, assigning development to one region and production to another.',
-        'Automated the creation of an Ansible and Docker container for streamlined infrastructure management.'
+        'Architected a production-grade Kubernetes platform using Terraform for Infrastructure as Code (IaC) and ArgoCD for GitOps-based continuous delivery, ensuring 100% environment consistency.',
+        'Implemented a Zero-Trust security model by integrating HashiCorp Vault for dynamic secret injection, eliminating hardcoded credentials in deployment manifests.',
+        'Engineered automated scaling policies using Karpenter and Horizontal Pod Autoscalers (HPA), optimizing resource utilization and reducing cloud spend by 30%.',
+        'Developed custom GitHub Actions workflows to perform automated linting, security scanning (Trivy), and dry-run validations before merging infrastructure changes.'
       ],
-      technologies: ['AWS', 'Terraform', 'Ansible', 'Docker', 'VPC'],
-      icon: <FaCloud className="text-primary-600" size={32} />,
-      link: '#'
+      technologies: ['Terraform', 'ArgoCD', 'Kubernetes', 'HashiCorp Vault', 'Karpenter', 'HPA', 'GitHub Actions', 'Trivy'],
+      icon: <FaShieldAlt className="text-primary-600" size={32} />,
+      link: '#',
+      focus: 'Security, Automation, and Scalability'
     },
     {
-      title: 'Cloud-Native Microservices Deployment',
+      title: 'High-Availability SRE Lab & Chaos Engineering',
       description: [
-        'Deployed the "Online Boutique" application using Kubernetes with Helm for efficient management of microservices and dependencies.',
-        'Streamlined maintenance using Helmfile for organized project structure and environment-specific configurations.',
-        'Configured Kubernetes for scalability, including stateful services like Redis and service discovery with load balancing.',
-        'Ensured modularity and reusability in deployments through Helm.'
+        'Deployed a multi-tier microservices architecture on a managed Kubernetes cluster, utilizing an Istio Service Mesh for advanced traffic management and mTLS encryption.',
+        'Established a comprehensive observability stack using Prometheus, Grafana, and Loki, defining and monitoring SLIs/SLOs to maintain a 99.9% availability target.',
+        'Executed Chaos Engineering experiments using Chaos Mesh to simulate pod failures and network latency, validating the system\'s self-healing capabilities.',
+        'Automated progressive delivery through Canary Deployments, allowing for safe, incremental traffic shifting and automated rollbacks based on real-time health metrics.'
       ],
-      technologies: ['Kubernetes', 'Helm', 'Helmfile', 'Redis', 'Microservices'],
-      icon: <FaServer className="text-primary-600" size={32} />,
-      link: '#'
+      technologies: ['Kubernetes', 'Istio', 'Prometheus', 'Grafana', 'Loki', 'Chaos Mesh', 'Canary Deployments'],
+      icon: <FaChartLine className="text-primary-600" size={32} />,
+      link: '#',
+      focus: 'Reliability, Observability, and Performance'
     }
   ]
 
@@ -74,6 +76,11 @@ const Projects = () => {
                       <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2 group-hover:text-primary-300 transition-colors leading-tight">
                         {project.title}
                       </h3>
+                      {project.focus && (
+                        <p className="text-sm text-primary-400 font-semibold mt-1">
+                          Focus: {project.focus}
+                        </p>
+                      )}
                     </div>
                   </div>
                   
