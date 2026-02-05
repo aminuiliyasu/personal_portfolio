@@ -13,7 +13,7 @@ const Projects = () => {
       ],
       technologies: ['Terraform', 'ArgoCD', 'Kubernetes', 'HashiCorp Vault', 'Karpenter', 'HPA', 'GitHub Actions', 'Trivy'],
       icon: <FaShieldAlt className="text-primary-600" size={32} />,
-      link: '#',
+      link: 'https://github.com/aminuiliyasu/Enterprise_GitOps_And_Zero_Trust_Platform',
       focus: 'Security, Automation, and Scalability'
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
       ],
       technologies: ['Kubernetes', 'Istio', 'Prometheus', 'Grafana', 'Loki', 'Chaos Mesh', 'Canary Deployments'],
       icon: <FaChartLine className="text-primary-600" size={32} />,
-      link: '#',
+      link: 'https://github.com/aminuiliyasu/High_Availability_SRE_Lab_And_Chaos_Engineering',
       focus: 'Reliability, Observability, and Performance'
     }
   ]
