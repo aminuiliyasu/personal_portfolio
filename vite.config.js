@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
-// For GitHub Pages project sites: base: '/personal_portfolio/'
-// For GitHub Pages user sites (username.github.io): base: '/'
+// Served from the root of the custom domain (aminuiliyasu.com).
+// If you ever revert to the GitHub Pages project URL
+// (aminuiliyasu.github.io/personal_portfolio/), set base back to '/personal_portfolio/'.
 export default defineConfig({
   plugins: [react()],
-  base: '/personal_portfolio/',
+  base: '/',
 })

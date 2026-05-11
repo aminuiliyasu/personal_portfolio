@@ -1,33 +1,49 @@
 import React from 'react'
-import { FaLink, FaShieldAlt, FaChartLine } from 'react-icons/fa'
+import { FaLink, FaDollarSign, FaHeartbeat, FaNetworkWired } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Enterprise GitOps & Zero-Trust Platform',
+      title: 'Real-Time Cloud Cost Optimization Engine',
       description: [
-        'Architected a production-grade Kubernetes platform using Terraform for Infrastructure as Code (IaC) and ArgoCD for GitOps-based continuous delivery, ensuring 100% environment consistency.',
-        'Implemented a Zero-Trust security model by integrating HashiCorp Vault for dynamic secret injection, eliminating hardcoded credentials in deployment manifests.',
-        'Engineered automated scaling policies using Karpenter and Horizontal Pod Autoscalers (HPA), optimizing resource utilization and reducing cloud spend by 30%.',
-        'Developed custom GitHub Actions workflows to perform automated linting, security scanning (Trivy), and dry-run validations before merging infrastructure changes.'
+        'Built a FinOps platform with Python, FastAPI, and SQLAlchemy to monitor AWS and GCP cloud usage in real time and identify cost inefficiencies across compute, Kubernetes, and storage resources.',
+        'Developed an automated optimization engine for rightsizing, scheduled shutdowns, and migration recommendations, including what-if simulations to estimate savings and evaluate policy impact.',
+        'Integrated AWS and GCP APIs for billing and infrastructure data ingestion, with audit logging and a custom dashboard for reporting and operational visibility.',
+        'Provisioned infrastructure with Terraform and Docker Compose, and ensured reliability through automated unit and integration testing with Pytest.',
+        'Reduced manual cloud cost monitoring effort by ~80% through automated analysis and actionable optimization workflows.'
       ],
-      technologies: ['Terraform', 'ArgoCD', 'Kubernetes', 'HashiCorp Vault', 'Karpenter', 'HPA', 'GitHub Actions', 'Trivy'],
-      icon: <FaShieldAlt className="text-primary-600" size={32} />,
-      link: 'https://github.com/aminuiliyasu/Enterprise_GitOps_And_Zero_Trust_Platform',
-      focus: 'Security, Automation, and Scalability'
+      technologies: ['Python', 'FastAPI', 'SQLAlchemy', 'AWS', 'GCP', 'Terraform', 'Docker', 'Pytest'],
+      icon: <FaDollarSign className="text-primary-600" size={32} />,
+      link: 'https://github.com/aminuiliyasu/Real-Time-Cloud-Cost-Optimization-Engine',
+      focus: 'FinOps, Automation, and Multi-Cloud Visibility'
     },
     {
-      title: 'High-Availability SRE Lab & Chaos Engineering',
+      title: 'Self-Healing Infrastructure with AI-Driven Incident Response',
       description: [
-        'Deployed a multi-tier microservices architecture on a managed Kubernetes cluster, utilizing an Istio Service Mesh for advanced traffic management and mTLS encryption.',
-        'Established a comprehensive observability stack using Prometheus, Grafana, and Loki, defining and monitoring SLIs/SLOs to maintain a 99.9% availability target.',
-        'Executed Chaos Engineering experiments using Chaos Mesh to simulate pod failures and network latency, validating the system\'s self-healing capabilities.',
-        'Automated progressive delivery through Canary Deployments, allowing for safe, incremental traffic shifting and automated rollbacks based on real-time health metrics.'
+        'Built an autonomous infrastructure monitoring platform using Prometheus and Python to detect anomalies and trigger automated remediation workflows in real time.',
+        'Developed a rule-based incident analysis engine that identified potential root causes from telemetry data and executed corrective actions through Kubernetes and Bash automation.',
+        'Automated Kubernetes scaling and recovery operations with safety controls to prevent unstable remediation behavior in production-like environments.',
+        'Containerized services with Docker and deployed them on Kubernetes clusters, with Grafana dashboards for observability and Terraform-based infrastructure provisioning.',
+        'Improved operational efficiency and reduced incident response time through automated detection and self-healing workflows.'
       ],
-      technologies: ['Kubernetes', 'Istio', 'Prometheus', 'Grafana', 'Loki', 'Chaos Mesh', 'Canary Deployments'],
-      icon: <FaChartLine className="text-primary-600" size={32} />,
-      link: 'https://github.com/aminuiliyasu/High_Availability_SRE_Lab_And_Chaos_Engineering',
-      focus: 'Reliability, Observability, and Performance'
+      technologies: ['Python', 'Kubernetes', 'Prometheus', 'Grafana', 'Terraform', 'Docker', 'Bash'],
+      icon: <FaHeartbeat className="text-primary-600" size={32} />,
+      link: 'https://github.com/aminuiliyasu/Self-Healing-Infrastructure-with-AI-Driven-Incident-Response',
+      focus: 'Reliability, Observability, and Autonomous Remediation'
+    },
+    {
+      title: 'AWS High-Availability VPC Architecture & Web Application Deployment',
+      description: [
+        'Designed and deployed a production-style AWS VPC architecture with public/private subnets across multiple availability zones, including Internet Gateway, NAT Gateway, route tables, and security groups.',
+        'Implemented secure infrastructure access through a Bastion Host and deployed web application servers in private subnets behind an Application Load Balancer.',
+        'Configured load balancing, health checks, and network routing to improve application availability, fault tolerance, and traffic distribution.',
+        'Automated infrastructure provisioning with Terraform using modular Infrastructure-as-Code practices for repeatable and maintainable deployments.',
+        'Applied AWS networking and security best practices, including controlled outbound internet access and isolated internal resources.'
+      ],
+      technologies: ['AWS', 'Terraform', 'Docker', 'Linux', 'Apache', 'EC2', 'VPC', 'ALB'],
+      icon: <FaNetworkWired className="text-primary-600" size={32} />,
+      link: 'https://github.com/aminuiliyasu/aws-vpc-high-availability-design',
+      focus: 'Networking, Security, and High Availability'
     }
   ]
 

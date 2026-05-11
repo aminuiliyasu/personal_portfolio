@@ -25,15 +25,18 @@ const About = () => {
             <div className="relative z-10 space-y-8">
               <div className="space-y-6">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  I am a <strong className="text-primary-400 text-2xl font-bold">Computer Engineer</strong> with a strong foundation in 
-                  computer systems, networks, and software engineering, complemented by specialized expertise in DevOps. 
-                  I am passionate about automating infrastructure, optimizing deployments, and managing cloud-based solutions 
-                  in collaborative environments.
+                  I am an experienced <strong className="text-primary-400 text-2xl font-bold">Computer Science Engineering</strong> graduate with a 
+                  strong foundation in Data Structures &amp; Algorithms (DSA) and hands-on experience building cloud-native 
+                  applications, DevOps pipelines, and production-style infrastructure on AWS.
                 </p>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  With a comprehensive understanding of operating systems, computer architecture, networks, and control systems, 
-                  combined with hands-on experience in designing CI/CD pipelines, containerization, and orchestration across 
-                  multiple cloud providers (GCP, AWS, Azure), I bring a unique perspective to building reliable and scalable solutions.
+                  Skilled in software development, containerization, CI/CD automation, Kubernetes, Terraform, and cloud 
+                  operations, with practical experience designing scalable systems, automating deployments, and improving 
+                  reliability through monitoring and self-healing workflows.
+                </p>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                  Passionate about <strong className="text-primary-400 font-bold">Cloud Engineering, DevOps, and Site Reliability Engineering</strong>, 
+                  with a focus on secure, maintainable, and high-availability systems.
                 </p>
               </div>
               

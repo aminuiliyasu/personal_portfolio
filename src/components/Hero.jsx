@@ -52,17 +52,17 @@ const Hero = () => {
           <div className="mb-10 animate-fade-in-up animation-delay-200">
             <div className="inline-block px-6 py-2 rounded-full bg-primary-600/20 border border-primary-500/30 mb-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400">
-                Computer Engineer
+                Cloud & DevOps Engineer
               </h2>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 font-medium mt-4">
-              Specialized in DevOps & Cloud Infrastructure
+              Computer Science Engineering · AWS · Kubernetes · SRE
             </p>
           </div>
           
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed">
-            Computer Engineer with strong DevOps expertise. Automating infrastructure, optimizing deployments, 
-            and managing cloud-based solutions to deliver reliable and scalable systems.
+            Building cloud-native applications, CI/CD pipelines, and production-style infrastructure on AWS. 
+            Focused on automation, reliability, and secure high-availability systems through DevOps and Site Reliability Engineering.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up animation-delay-600">
@@ -88,7 +88,7 @@ const Hero = () => {
               <div className="bg-primary-600/20 p-2 rounded-lg">
                 <FaMapMarkerAlt className="text-primary-400" />
               </div>
-              <span className="font-medium">Budapest, Hungary</span>
+              <span className="font-medium">Pécs, Hungary</span>
             </div>
           </div>
           

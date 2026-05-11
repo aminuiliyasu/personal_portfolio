@@ -24,7 +24,7 @@ const Footer = () => {
               Aminu Iliyasu
             </h3>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Computer Engineer with DevOps expertise, passionate about automating infrastructure and building scalable cloud solutions.
+              Cloud & DevOps Engineer passionate about automating infrastructure, designing scalable cloud-native systems, and improving reliability through SRE practices.
             </p>
           </div>
           
@@ -51,7 +51,7 @@ const Footer = () => {
                 <div className="bg-primary-600/20 p-3 rounded-lg border border-primary-500/30">
                   <FaMapMarkerAlt className="text-primary-400" />
                 </div>
-                <span className="font-medium">Budapest, Hungary</span>
+                <span className="font-medium">Pécs, Hungary</span>
               </div>
             </div>
           </div>

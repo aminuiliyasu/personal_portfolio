@@ -1,8 +1,20 @@
 import React, { useState } from 'react'
-import { FaGraduationCap, FaCalendarAlt, FaTrophy, FaAward } from 'react-icons/fa'
+import { FaGraduationCap, FaCalendarAlt, FaTrophy, FaAward, FaBook } from 'react-icons/fa'
 
 const Education = () => {
   const [logoError, setLogoError] = useState(false)
+
+  const coursework = [
+    'Database Systems',
+    'Software Architecture & OOP (SOLID, Spring)',
+    'Version Control (Git)',
+    'Agile Methodologies',
+    'Web Services',
+    'Computer Networks (TCP/IP)',
+    'Operating Systems (Processes, Memory, Concurrency)',
+    'Computer Architecture',
+    'Control Systems & Signal Processing'
+  ]
 
   return (
     <section id="education" className="section-container bg-slate-900 relative overflow-hidden">
@@ -90,6 +102,26 @@ const Education = () => {
                       <span className="text-primary-200/70 font-semibold text-lg">/ 5.00</span>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Related Coursework Section */}
+              <div className="mt-8 pt-8 border-t border-slate-700">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="bg-primary-600/20 p-2.5 rounded-lg border border-primary-500/30">
+                    <FaBook className="text-primary-300" size={20} />
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-white">Related Coursework</h4>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {coursework.map((course, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-primary-600/10 text-primary-300 rounded-lg text-sm font-semibold border border-primary-500/30 backdrop-blur-sm hover:bg-primary-600/20 hover:border-primary-500/50 hover:text-primary-200 transition-all"
+                    >
+                      {course}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
