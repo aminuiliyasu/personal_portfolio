@@ -5,15 +5,15 @@ const Education = () => {
   const [logoError, setLogoError] = useState(false)
 
   const coursework = [
+    'Data Structures & Algorithms',
     'Database Systems',
-    'Software Architecture & OOP (SOLID, Spring)',
-    'Version Control (Git)',
-    'Agile Methodologies',
-    'Web Services',
+    'Software Architecture & OOP',
+    'Operating Systems',
     'Computer Networks (TCP/IP)',
-    'Operating Systems (Processes, Memory, Concurrency)',
     'Computer Architecture',
-    'Control Systems & Signal Processing'
+    'Web Services',
+    'Agile Methodologies',
+    'Information Systems & Control'
   ]
 
   return (
@@ -82,7 +82,7 @@ const Education = () => {
                 {/* Date Badge */}
                 <div className="flex items-center gap-3 text-primary-300 font-semibold text-lg bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/20 backdrop-blur-sm">
                   <FaCalendarAlt className="text-primary-300" />
-                  <span>Graduated: January 2026</span>
+                  <span>Aug 2022 – Jan 2026</span>
                 </div>
               </div>
               

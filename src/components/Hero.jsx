@@ -61,8 +61,8 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed">
-            Building cloud-native applications, CI/CD pipelines, and production-style infrastructure on AWS. 
-            Focused on automation, reliability, and secure high-availability systems through DevOps and Site Reliability Engineering.
+            B.Sc. Computer Science Engineering graduate (GPA 4.8/5.0) with production AWS experience shipping 
+            containerized Spring Boot services, CI/CD pipelines, and Terraform infrastructure-as-code. Seeking Cloud, DevOps, and SRE roles.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up animation-delay-600">

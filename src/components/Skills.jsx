@@ -110,33 +110,30 @@ const Skills = () => {
     {
       title: 'Fundamentals',
       categories: [
-        { title: 'Core Engineering', icon: <FaMicrochip />, skills: ['Operating Systems', 'Computer Architecture', 'Computer Networks', 'Signal & Systems', 'Control Systems'], color: 'from-blue-500 to-cyan-500' },
-        { title: 'Programming Languages', icon: <FaCode />, skills: ['Java', 'Python', 'Bash Scripting'], color: 'from-emerald-500 to-teal-500' },
-        { title: 'Software Engineering', icon: <FaCode />, skills: ['Software Engineering Principles', 'System Design', 'Version Control (Git)'], color: 'from-purple-500 to-pink-500' },
-        { title: 'Databases', icon: <FaDatabase />, skills: ['SQL', 'Database Design', 'Data Management'], color: 'from-orange-500 to-amber-500' }
+        { title: 'Languages', icon: <FaCode />, skills: ['Python', 'Java', 'Bash', 'SQL'], color: 'from-emerald-500 to-teal-500' },
+        { title: 'Frameworks & APIs', icon: <FaCode />, skills: ['Spring Boot', 'FastAPI', 'REST APIs', 'Modular Monoliths'], color: 'from-purple-500 to-pink-500' },
+        { title: 'Data & Messaging', icon: <FaDatabase />, skills: ['MySQL', 'MongoDB', 'Redis', 'RabbitMQ'], color: 'from-orange-500 to-amber-500' },
+        { title: 'Other', icon: <FaMicrochip />, skills: ['Linux Administration', 'High Availability', 'SRE Practices'], color: 'from-blue-500 to-cyan-500' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       categories: [
-        { title: 'Cloud Platforms', icon: <FaCloud />, skills: ['AWS', 'GCP', 'Azure'], color: 'from-cyan-500 to-blue-500' },
-        { title: 'Infrastructure as Code', icon: <FaCode />, skills: ['Terraform'], color: 'from-indigo-500 to-purple-500' },
-        { title: 'Configuration Management', icon: <FaTools />, skills: ['Ansible', 'Helm Chart'], color: 'from-pink-500 to-rose-500' }
+        { title: 'Cloud Platforms', icon: <FaCloud />, skills: ['AWS (EC2, ECS, Fargate, EKS, ECR, S3, VPC, Route 53, IAM, ALB, ACM, RDS, ElastiCache, CloudWatch)', 'GCP', 'Azure'], color: 'from-cyan-500 to-blue-500' },
+        { title: 'IaC & Config', icon: <FaCode />, skills: ['Terraform', 'Ansible', 'Helm'], color: 'from-indigo-500 to-purple-500' },
+        { title: 'Containers & Orchestration', icon: <FaServer />, skills: ['Docker', 'Docker Compose', 'Kubernetes'], color: 'from-blue-500 to-indigo-500' }
       ]
     },
     {
       title: 'DevOps & Automation',
       categories: [
-        { title: 'Containerization', icon: <FaServer />, skills: ['Docker'], color: 'from-blue-500 to-indigo-500' },
-        { title: 'Container Orchestration', icon: <FaCloud />, skills: ['Kubernetes'], color: 'from-cyan-500 to-teal-500' },
-        { title: 'CI/CD Tools', icon: <FaTools />, skills: ['Jenkins', 'GitHub Actions'], color: 'from-red-500 to-orange-500' },
-        { title: 'Monitoring & Observability', icon: <FaServer />, skills: ['Prometheus', 'Grafana'], color: 'from-yellow-500 to-amber-500' }
+        { title: 'CI/CD & VCS', icon: <FaTools />, skills: ['GitHub Actions', 'Jenkins', 'Git'], color: 'from-red-500 to-orange-500' },
+        { title: 'Observability', icon: <FaServer />, skills: ['Prometheus', 'Grafana', 'CloudWatch'], color: 'from-yellow-500 to-amber-500' }
       ]
     },
     {
       title: 'Professional Skills',
       categories: [
-        { title: 'Project Management', icon: <FaProjectDiagram />, skills: ['Project Planning', 'Team Coordination', 'Agile Methodologies'], color: 'from-teal-500 to-cyan-500' },
         { title: 'Soft Skills', icon: <FaUsers />, skills: ['Team player', 'Project management', 'Stamina and consistency', 'Good communicator', 'Proactive attitude'], color: 'from-slate-500 to-gray-500' }
       ]
     }

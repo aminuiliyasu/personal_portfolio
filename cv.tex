@@ -1,0 +1,151 @@
+\documentclass[10pt,a4paper]{article}
+
+% --- Packages -------------------------------------------------------
+\usepackage[a4paper,top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+% TeX Gyre Heros ≈ Helvetica — cleaner tech-CV look than Latin Modern
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+
+% --- Colors ---------------------------------------------------------
+\definecolor{primary}{HTML}{1F3A5F}
+\definecolor{accent}{HTML}{2C7A7B}
+
+% --- Hyperlink setup ------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=accent,
+    citecolor=primary
+}
+
+% --- Section formatting --------------------------------------------
+\titleformat{\section}
+    {\normalfont\color{primary}\bfseries\large}
+    {}{0pt}
+    {\MakeUppercase}
+    [\color{primary}\titlerule\vspace{1pt}]
+\titlespacing*{\section}{0pt}{5pt}{2pt}
+
+% --- List spacing ---------------------------------------------------
+\setlist[itemize]{leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% --- Custom commands -----------------------------------------------
+\newcommand{\role}[4]{%
+    \noindent\textbf{#1} \textit{--- #2} \hfill \textcolor{primary!80}{#3} \\
+    \textcolor{accent}{#4}\vspace{1pt}
+}
+
+\newcommand{\projectlink}[2]{%
+    \href{#1}{\textcolor{accent}{\textbf{#2}}}%
+}
+
+% #1 title, #2 tech stack, #3 GitHub URL, #4 GitHub label, #5 live URL (plain text; pass {} if none)
+\newcommand{\project}[5]{%
+    \noindent\textbf{#1} \hfill \textcolor{accent}{\small\textit{#2}}\\[-1pt]
+    \small
+    \projectlink{#3}{\faGithub\ #4}%
+    \if\relax\detokenize{#5}\relax\else
+      \enspace$\vert$\enspace\href{#5}{\textcolor{accent}{\textbf{#5}}}%
+    \fi
+}
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+%--------------------------------------------------------------------
+\begin{document}
+
+% ===== Header ======================================================
+\begin{center}
+    {\color{primary}\Huge\bfseries AMINU ILIYASU}\\[3pt]
+    \small
+    Pecs, Hungary \quad
+    Email: \href{mailto:iliyasuaminu50@gmail.com}{iliyasuaminu50@gmail.com} \quad
+    Phone: +36 30 124 1895 \\[1pt]
+    LinkedIn: \href{https://www.linkedin.com/in/aminu-iliyasu-005109253/}{linkedin.com/in/aminu-iliyasu-005109253} \quad
+    GitHub: \href{https://github.com/aminuiliyasu}{github.com/aminuiliyasu} \quad
+    Portfolio: \href{https://aminuiliyasu.com}{aminuiliyasu.com}
+\end{center}
+\vspace{-6pt}
+
+% ===== Summary =====================================================
+\section*{Summary}
+\small
+B.Sc.\ Computer Science Engineering graduate (GPA 4.8/5.0) with hands-on production AWS experience shipping containerized Spring Boot services, CI/CD pipelines, and Terraform infrastructure-as-code. Designed and publicly deployed a full-stack e-commerce platform (modular Java backend, customer/admin web apps, Docker) with a cost-controlled live AWS runtime and an EKS-oriented Terraform target architecture (VPC, RDS, ElastiCache, ALB, CloudFront). Seeking Cloud Engineer, DevOps Engineer, and SRE roles.
+
+% ===== Technical Skills ============================================
+\section*{Technical Skills}
+\small
+\textbf{Languages:} Python, Java, Bash, SQL \\
+\textbf{Cloud:} AWS (EC2, ECS, Fargate, EKS, ECR, S3, VPC, Route 53, IAM, ALB, ACM, RDS, ElastiCache, CloudWatch), GCP, Azure \\
+\textbf{IaC \& Config:} Terraform, Ansible, Helm \\
+\textbf{Containers \& Orchestration:} Docker, Docker Compose, Kubernetes \\
+\textbf{CI/CD \& VCS:} GitHub Actions, Jenkins, Git \\
+\textbf{Data \& Messaging:} MySQL, MongoDB, Redis, RabbitMQ \\
+\textbf{Observability:} Prometheus, Grafana, CloudWatch \\
+\textbf{Other:} Spring Boot, FastAPI, REST APIs, Linux administration, Modular monoliths, High Availability, SRE practices
+
+% ===== Education ===================================================
+\section*{Education}
+\small
+\noindent\textbf{University of Pecs} \hfill \textcolor{primary!80}{Pecs, Hungary} \\
+\textit{B.Sc.\ in Computer Science Engineering} \enspace$\bullet$\enspace \textbf{GPA:} 4.8 / 5.0 \hfill \textcolor{accent}{Aug 2022 -- Jan 2026} \\
+\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Systems, Software Architecture \& OOP, Operating Systems, Computer Networks (TCP/IP), Computer Architecture, Web Services, Agile Methodologies, Information Systems \& Control.
+
+% ===== Experience ==================================================
+\section*{Experience}
+\small
+\role{\href{https://auroraoriental.io}{Aurora Oriental}}{Software Engineer --- Cloud \& DevOps (Contract)}{Remote}{February 2026 -- Present}
+\begin{itemize}
+    \item Shipped a production split-deployment architecture by hosting frontend assets on a CDN and running containerized Spring Boot backends on AWS ECS, with secrets injected through CI/CD.
+    \item Cut deployment cycle time from 35 to 8 minutes by building GitHub Actions CI/CD pipelines that automated Java API testing, builds, and frontend lint/production releases.
+    \item Standardized releases across 4 microservices by engineering multi-stage Docker images and publishing to AWS ECR/ECS with consistent runtime configuration.
+    \item Processed monthly payment and shipping events with zero frontend credential exposure by integrating Stripe, Firebase, Billingo, and GLS/FoxPost webhooks in isolated backend services.
+    \item Managed AWS Route 53 DNS for 3 production domains, including domain verification and TXT records for external service integrations.
+\end{itemize}
+
+% ===== Projects ====================================================
+\section*{Projects}
+\small
+\project{Cloud Atlas --- AWS Infrastructure Visualizer}%
+    {Python, FastAPI, Docker, AWS ECS Fargate, ECR, ALB, ACM, IAM}%
+    {https://github.com/aminuiliyasu/cloud-atlas}%
+    {GitHub}%
+    {https://awsvisualizer.aminuiliyasu.com}
+
+\begin{itemize}
+    \item Designed and shipped a production AWS infrastructure intelligence platform that discovers account resources via AWS APIs, correlates Terraform state for managed vs unmanaged drift, attributes Cost Explorer spend, and surfaces delete-impact and public-exposure risk in one operational view.
+    \item Containerized the full stack with a multi-stage Docker build and deployed on Amazon ECS (Fargate) from Amazon ECR behind an Application Load Balancer with ACM-managed TLS certificates and a custom HTTPS domain (Hostinger DNS to ALB).
+    \item Implemented session-scoped credential handling so customer AWS keys remain in memory only (never persisted to disk or a database), aligned with least-privilege read-only IAM usage for safe cross-account scanning.
+\end{itemize}
+\vspace{1pt}
+\project{E-Commerce Platform for DevOps Practice}%
+    {Java, Spring Boot, Docker, Terraform, AWS EC2, MySQL, MongoDB, Redis, RabbitMQ}%
+    {https://github.com/aminuiliyasu/e-commerce-devops-practice}%
+    {GitHub}%
+    {https://ecommerce.aminuiliyasu.com}
+
+\begin{itemize}
+    \item Built an end-to-end e-commerce platform as a Spring Boot modular monolith (user, catalog, cart, order, payment, notification, admin) with customer and admin web apps, JWT authentication, and polyglot persistence (MySQL, MongoDB, Redis, RabbitMQ).
+    \item Authored reusable Terraform modules and \texttt{dev}/\texttt{staging}/\texttt{prod} environments for a production-shaped AWS design (VPC, security groups, EKS, RDS, ElastiCache, Amazon MQ, ALB, S3, IAM, ACM, CloudFront, WAF), separating practice runtime cost from target architecture.
+    \item Deployed the full stack to AWS EC2 with Docker Compose and Caddy (TLS), configured custom-domain DNS for HTTPS, and published a live customer site at ecommerce.aminuiliyasu.com with open user registration and an isolated admin surface.
+\end{itemize}
+\vspace{1pt}
+
+% ===== Activities ==================================================
+\section*{Leadership \& Activities}
+\small
+\textbf{Founding Member}, MIK Hub (Faculty Student Club), University of Pécs \hfill Jan 2025 -- Jan 2026 \\
+\textbf{International Student Ambassador}, University of Pécs \hfill Oct 2024 -- Oct 2025 \\
+\textbf{International Student Mentor}, National Union of Students in Hungary (HÖOK) \hfill Aug 2024 -- Aug 2025 \\
+\textbf{Logistics Team Lead}, Google Developer Student Club (GDSC), Pécs \hfill Aug 2024 -- Aug 2025 \\
+\textbf{Social Committee Member}, Erasmus Student Network (ESN Pécs) \hfill Sep 2024 -- Jun 2025
+
+\end{document}

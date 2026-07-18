@@ -6,7 +6,7 @@ const Activities = () => {
     {
       organization: 'MIK Hub',
       role: 'Founding Member',
-      period: '2025 - 2026',
+      period: 'January 2025 - January 2026',
       icon: <FaRocket className="text-white" size={24} />,
       gradient: 'from-primary-400 to-primary-500',
       bg: 'from-primary-400/20 to-primary-500/20'
@@ -20,14 +20,6 @@ const Activities = () => {
       bg: 'from-primary-500/20 to-primary-600/20'
     },
     {
-      organization: 'Erasmus Student Network (ESN Pécs)',
-      role: 'Social Committee Member',
-      period: 'September 2024 - June 2025',
-      icon: <FaUsers className="text-white" size={24} />,
-      gradient: 'from-primary-600 to-primary-700',
-      bg: 'from-primary-600/20 to-primary-700/20'
-    },
-    {
       organization: 'National Union of Students in Hungary (HÖOK)',
       role: 'International Student Mentor',
       period: 'August 2024 - August 2025',
@@ -38,10 +30,18 @@ const Activities = () => {
     {
       organization: 'Google Developer Student Club (GDSC)',
       role: 'Logistics Team Lead',
-      period: '2023 - 2024',
+      period: 'August 2024 - August 2025',
       icon: <FaCode className="text-white" size={24} />,
       gradient: 'from-primary-600 to-primary-800',
       bg: 'from-primary-600/20 to-primary-800/20'
+    },
+    {
+      organization: 'Erasmus Student Network (ESN Pécs)',
+      role: 'Social Committee Member',
+      period: 'September 2024 - June 2025',
+      icon: <FaUsers className="text-white" size={24} />,
+      gradient: 'from-primary-600 to-primary-700',
+      bg: 'from-primary-600/20 to-primary-700/20'
     }
   ]
 

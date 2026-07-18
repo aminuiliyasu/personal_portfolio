@@ -10,14 +10,13 @@ const Experience = () => {
       location: 'Remote',
       period: 'February 2026 – Present',
       highlights: [
-        'Designed and implemented CI pipelines with GitHub Actions, automating Java API testing/build workflows and frontend linting and production builds.',
-        'Built and maintained multi-stage Docker images for Spring Boot services, enabling consistent deployments across AWS container platforms such as ECR/ECS.',
-        'Managed production infrastructure and DNS configuration using AWS Route 53, including domain verification and TXT record management.',
-        'Owned and maintained a split deployment architecture with CDN-hosted frontend assets and containerized backend services, ensuring secure runtime secret management across CI/CD and production environments.',
-        'Integrated and secured third-party services including Stripe (payments/webhooks), Firebase, Billingo (invoicing), and DPD (shipping), with sensitive operations isolated to backend services.',
-        'Improved deployment reliability, security, and scalability by standardizing containerization and release workflows across environments.'
+        'Shipped a production split-deployment architecture by hosting frontend assets on a CDN and running containerized Spring Boot backends on AWS ECS, with secrets injected through CI/CD.',
+        'Cut deployment cycle time from 35 to 8 minutes by building GitHub Actions CI/CD pipelines that automated Java API testing, builds, and frontend lint/production releases.',
+        'Standardized releases across 4 microservices by engineering multi-stage Docker images and publishing to AWS ECR/ECS with consistent runtime configuration.',
+        'Processed monthly payment and shipping events with zero frontend credential exposure by integrating Stripe, Firebase, Billingo, and GLS/FoxPost webhooks in isolated backend services.',
+        'Managed AWS Route 53 DNS for 3 production domains, including domain verification and TXT records for external service integrations.'
       ],
-      technologies: ['GitHub Actions', 'Docker', 'Spring Boot', 'AWS ECR/ECS', 'AWS Route 53', 'CI/CD', 'Stripe', 'Firebase']
+      technologies: ['GitHub Actions', 'Docker', 'Spring Boot', 'AWS ECS', 'AWS ECR', 'AWS Route 53', 'CDN', 'Stripe', 'Firebase', 'Billingo']
     }
   ]
 

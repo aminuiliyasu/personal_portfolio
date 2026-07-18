@@ -24,7 +24,7 @@ const Footer = () => {
               Aminu Iliyasu
             </h3>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Cloud & DevOps Engineer passionate about automating infrastructure, designing scalable cloud-native systems, and improving reliability through SRE practices.
+              B.Sc. Computer Science Engineering graduate with production AWS experience. Seeking Cloud, DevOps, and SRE roles.
             </p>
           </div>
           

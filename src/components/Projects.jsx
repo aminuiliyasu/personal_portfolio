@@ -1,49 +1,33 @@
 import React from 'react'
-import { FaLink, FaDollarSign, FaHeartbeat, FaNetworkWired } from 'react-icons/fa'
+import { FaLink, FaExternalLinkAlt, FaCloud, FaShoppingCart } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Real-Time Cloud Cost Optimization Engine',
+      title: 'Cloud Atlas — AWS Infrastructure Visualizer',
       description: [
-        'Built a FinOps platform with Python, FastAPI, and SQLAlchemy to monitor AWS and GCP cloud usage in real time and identify cost inefficiencies across compute, Kubernetes, and storage resources.',
-        'Developed an automated optimization engine for rightsizing, scheduled shutdowns, and migration recommendations, including what-if simulations to estimate savings and evaluate policy impact.',
-        'Integrated AWS and GCP APIs for billing and infrastructure data ingestion, with audit logging and a custom dashboard for reporting and operational visibility.',
-        'Provisioned infrastructure with Terraform and Docker Compose, and ensured reliability through automated unit and integration testing with Pytest.',
-        'Reduced manual cloud cost monitoring effort by ~80% through automated analysis and actionable optimization workflows.'
+        'Designed and shipped a production AWS infrastructure intelligence platform that discovers account resources via AWS APIs, correlates Terraform state for managed vs unmanaged drift, attributes Cost Explorer spend, and surfaces delete-impact and public-exposure risk in one operational view.',
+        'Containerized the full stack with a multi-stage Docker build and deployed on Amazon ECS (Fargate) from Amazon ECR behind an Application Load Balancer with ACM-managed TLS certificates and a custom HTTPS domain (Hostinger DNS to ALB).',
+        'Implemented session-scoped credential handling so customer AWS keys remain in memory only (never persisted to disk or a database), aligned with least-privilege read-only IAM usage for safe cross-account scanning.'
       ],
-      technologies: ['Python', 'FastAPI', 'SQLAlchemy', 'AWS', 'GCP', 'Terraform', 'Docker', 'Pytest'],
-      icon: <FaDollarSign className="text-primary-600" size={32} />,
-      link: 'https://github.com/aminuiliyasu/Real-Time-Cloud-Cost-Optimization-Engine',
-      focus: 'FinOps, Automation, and Multi-Cloud Visibility'
+      technologies: ['Python', 'FastAPI', 'Docker', 'AWS ECS Fargate', 'ECR', 'ALB', 'ACM', 'IAM'],
+      icon: <FaCloud className="text-primary-600" size={32} />,
+      link: 'https://github.com/aminuiliyasu/cloud-atlas',
+      liveUrl: 'https://awsvisualizer.aminuiliyasu.com',
+      focus: 'AWS Infrastructure Intelligence & Production Deployment'
     },
     {
-      title: 'Self-Healing Infrastructure with AI-Driven Incident Response',
+      title: 'E-Commerce Platform for DevOps Practice',
       description: [
-        'Built an autonomous infrastructure monitoring platform using Prometheus and Python to detect anomalies and trigger automated remediation workflows in real time.',
-        'Developed a rule-based incident analysis engine that identified potential root causes from telemetry data and executed corrective actions through Kubernetes and Bash automation.',
-        'Automated Kubernetes scaling and recovery operations with safety controls to prevent unstable remediation behavior in production-like environments.',
-        'Containerized services with Docker and deployed them on Kubernetes clusters, with Grafana dashboards for observability and Terraform-based infrastructure provisioning.',
-        'Improved operational efficiency and reduced incident response time through automated detection and self-healing workflows.'
+        'Built an end-to-end e-commerce platform as a Spring Boot modular monolith (user, catalog, cart, order, payment, notification, admin) with customer and admin web apps, JWT authentication, and polyglot persistence (MySQL, MongoDB, Redis, RabbitMQ).',
+        'Authored reusable Terraform modules and dev/staging/prod environments for a production-shaped AWS design (VPC, security groups, EKS, RDS, ElastiCache, Amazon MQ, ALB, S3, IAM, ACM, CloudFront, WAF), separating practice runtime cost from target architecture.',
+        'Deployed the full stack to AWS EC2 with Docker Compose and Caddy (TLS), configured custom-domain DNS for HTTPS, and published a live customer site at ecommerce.aminuiliyasu.com with open user registration and an isolated admin surface.'
       ],
-      technologies: ['Python', 'Kubernetes', 'Prometheus', 'Grafana', 'Terraform', 'Docker', 'Bash'],
-      icon: <FaHeartbeat className="text-primary-600" size={32} />,
-      link: 'https://github.com/aminuiliyasu/Self-Healing-Infrastructure-with-AI-Driven-Incident-Response',
-      focus: 'Reliability, Observability, and Autonomous Remediation'
-    },
-    {
-      title: 'AWS High-Availability VPC Architecture & Web Application Deployment',
-      description: [
-        'Designed and deployed a production-style AWS VPC architecture with public/private subnets across multiple availability zones, including Internet Gateway, NAT Gateway, route tables, and security groups.',
-        'Implemented secure infrastructure access through a Bastion Host and deployed web application servers in private subnets behind an Application Load Balancer.',
-        'Configured load balancing, health checks, and network routing to improve application availability, fault tolerance, and traffic distribution.',
-        'Automated infrastructure provisioning with Terraform using modular Infrastructure-as-Code practices for repeatable and maintainable deployments.',
-        'Applied AWS networking and security best practices, including controlled outbound internet access and isolated internal resources.'
-      ],
-      technologies: ['AWS', 'Terraform', 'Docker', 'Linux', 'Apache', 'EC2', 'VPC', 'ALB'],
-      icon: <FaNetworkWired className="text-primary-600" size={32} />,
-      link: 'https://github.com/aminuiliyasu/aws-vpc-high-availability-design',
-      focus: 'Networking, Security, and High Availability'
+      technologies: ['Java', 'Spring Boot', 'Docker', 'Terraform', 'AWS EC2', 'MySQL', 'MongoDB', 'Redis', 'RabbitMQ'],
+      icon: <FaShoppingCart className="text-primary-600" size={32} />,
+      link: 'https://github.com/aminuiliyasu/e-commerce-devops-practice',
+      liveUrl: 'https://ecommerce.aminuiliyasu.com',
+      focus: 'Full-Stack E-Commerce, Terraform & Live AWS Deployment'
     }
   ]
 
@@ -125,17 +109,31 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  {/* View Project Link */}
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/link inline-flex items-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
-                  >
-                    <FaLink />
-                    <span>View Project</span>
-                    <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-                  </a>
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link inline-flex items-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
+                    >
+                      <FaLink />
+                      <span>GitHub</span>
+                      <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/link inline-flex items-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
+                      >
+                        <FaExternalLinkAlt />
+                        <span>Live Site</span>
+                        <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             )

@@ -25,18 +25,17 @@ const About = () => {
             <div className="relative z-10 space-y-8">
               <div className="space-y-6">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  I am an experienced <strong className="text-primary-400 text-2xl font-bold">Computer Science Engineering</strong> graduate with a 
-                  strong foundation in Data Structures &amp; Algorithms (DSA) and hands-on experience building cloud-native 
-                  applications, DevOps pipelines, and production-style infrastructure on AWS.
+                  <strong className="text-primary-400 text-2xl font-bold">B.Sc. Computer Science Engineering</strong> graduate (GPA 4.8/5.0) with 
+                  hands-on production AWS experience shipping containerized Spring Boot services, CI/CD pipelines, and 
+                  Terraform infrastructure-as-code.
                 </p>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Skilled in software development, containerization, CI/CD automation, Kubernetes, Terraform, and cloud 
-                  operations, with practical experience designing scalable systems, automating deployments, and improving 
-                  reliability through monitoring and self-healing workflows.
+                  Designed and publicly deployed a full-stack e-commerce platform (modular Java backend, customer/admin 
+                  web apps, Docker) with a cost-controlled live AWS runtime and an EKS-oriented Terraform target architecture 
+                  (VPC, RDS, ElastiCache, ALB, CloudFront).
                 </p>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Passionate about <strong className="text-primary-400 font-bold">Cloud Engineering, DevOps, and Site Reliability Engineering</strong>, 
-                  with a focus on secure, maintainable, and high-availability systems.
+                  Seeking <strong className="text-primary-400 font-bold">Cloud Engineer, DevOps Engineer, and SRE</strong> roles.
                 </p>
               </div>
               
