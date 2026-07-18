@@ -19,62 +19,62 @@ const About = () => {
           </span>
         </h2>
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-3xl shadow-2xl p-12 transform hover:shadow-primary-500/20 transition-all duration-500 border border-slate-700/50 relative overflow-hidden group">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-10 md:p-12 transform hover:shadow-primary-500/20 transition-all duration-500 border border-slate-700/50 relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-500/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             
-            <div className="relative z-10 space-y-8">
-              <div className="space-y-6">
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  <strong className="text-primary-400 text-2xl font-bold">B.Sc. Computer Science Engineering</strong> graduate (GPA 4.8/5.0) with 
+            <div className="relative z-10 space-y-6 sm:space-y-8">
+              <div className="space-y-4 sm:space-y-6">
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+                  <strong className="text-primary-400 text-xl sm:text-2xl font-bold">B.Sc. Computer Science Engineering</strong> graduate (GPA 4.8/5.0) with 
                   hands-on production AWS experience shipping containerized Spring Boot services, CI/CD pipelines, and 
                   Terraform infrastructure-as-code.
                 </p>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
                   Designed and publicly deployed a full-stack e-commerce platform (modular Java backend, customer/admin 
                   web apps, Docker) with a cost-controlled live AWS runtime and an EKS-oriented Terraform target architecture 
                   (VPC, RDS, ElastiCache, ALB, CloudFront).
                 </p>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
                   Seeking <strong className="text-primary-400 font-bold">Cloud Engineer, DevOps Engineer, and SRE</strong> roles.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-700">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-slate-700">
                 <div className="text-center group cursor-pointer">
-                  <div className="relative mx-auto w-24 h-24 mb-5">
+                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
-                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50">
-                      <FaCode className="text-white" size={36} />
+                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
+                      <FaCode className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors">Software Engineering</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Software Engineering</p>
                 </div>
                 <div className="text-center group cursor-pointer">
-                  <div className="relative mx-auto w-24 h-24 mb-5">
+                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
-                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50">
-                      <FaCloud className="text-white" size={36} />
+                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
+                      <FaCloud className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors">Cloud Infrastructure</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Cloud Infrastructure</p>
                 </div>
                 <div className="text-center group cursor-pointer">
-                  <div className="relative mx-auto w-24 h-24 mb-5">
+                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
-                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50">
-                      <FaServer className="text-white" size={36} />
+                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
+                      <FaServer className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors">System Architecture</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">System Architecture</p>
                 </div>
                 <div className="text-center group cursor-pointer">
-                  <div className="relative mx-auto w-24 h-24 mb-5">
+                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
-                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50">
-                      <FaCog className="text-white" size={36} />
+                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
+                      <FaCog className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors">DevOps Automation</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">DevOps Automation</p>
                 </div>
               </div>
             </div>

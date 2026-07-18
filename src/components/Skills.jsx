@@ -156,12 +156,12 @@ const Skills = () => {
           </span>
         </h2>
         
-        <div className="max-w-7xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-10 sm:space-y-16">
           {skillGroups.map((group, groupIndex) => (
-            <div key={groupIndex} className="space-y-8">
+            <div key={groupIndex} className="space-y-6 sm:space-y-8">
               {/* Group Title */}
-              <div className="text-center mb-10">
-                <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
+              <div className="text-center mb-6 sm:mb-10">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-2">
                   {group.title}
                 </h3>
                 <div className="h-1 w-32 bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-full mx-auto"></div>
@@ -189,10 +189,10 @@ const Skills = () => {
                       {category.skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className={`group/skill flex items-center gap-2 text-gray-300 hover:text-white transition-colors`}
+                          className={`group/skill flex items-start gap-2 text-gray-300 hover:text-white transition-colors`}
                         >
-                          <div className={`w-1.5 h-1.5 bg-gradient-to-br ${category.color} rounded-full group-hover/skill:scale-150 transition-transform`}></div>
-                          <span className="text-sm font-medium">{skill}</span>
+                          <div className={`w-1.5 h-1.5 bg-gradient-to-br ${category.color} rounded-full group-hover/skill:scale-150 transition-transform flex-shrink-0 mt-1.5`}></div>
+                          <span className="text-sm font-medium break-words">{skill}</span>
                         </div>
                       ))}
                     </div>

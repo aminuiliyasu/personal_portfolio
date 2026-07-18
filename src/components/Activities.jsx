@@ -63,7 +63,7 @@ const Activities = () => {
         </h2>
         
         <div className="max-w-5xl mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {activities.map((activity, index) => (
               <div 
                 key={index} 
@@ -71,45 +71,44 @@ const Activities = () => {
               >
                 {/* Timeline line */}
                 {index < activities.length - 1 && (
-                  <div className="absolute left-8 top-20 bottom-0 w-0.5 bg-gradient-to-b from-primary-500/30 via-primary-600/30 to-transparent"></div>
+                  <div className="absolute left-5 sm:left-8 top-14 sm:top-20 bottom-0 w-0.5 bg-gradient-to-b from-primary-500/30 via-primary-600/30 to-transparent"></div>
                 )}
                 
-                <div className="relative flex gap-8">
+                <div className="relative flex gap-3 sm:gap-6 md:gap-8">
                   {/* Icon with timeline dot */}
                   <div className="flex-shrink-0 relative z-10">
-                    <div className={`relative bg-gradient-to-br ${activity.gradient} w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                      <div className={`absolute -inset-1 bg-gradient-to-br ${activity.gradient} rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity`}></div>
-                      <div className="relative z-10">
-                        {React.cloneElement(activity.icon, { size: 28 })}
+                    <div className={`relative bg-gradient-to-br ${activity.gradient} w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                      <div className={`absolute -inset-1 bg-gradient-to-br ${activity.gradient} rounded-xl sm:rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity`}></div>
+                      <div className="relative z-10 text-white">
+                        {React.cloneElement(activity.icon, { size: 20, className: 'text-white' })}
                       </div>
                     </div>
-                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-br ${activity.gradient} rounded-full border-4 border-slate-900 shadow-lg`}></div>
                   </div>
                   
                   {/* Content Card */}
-                  <div className="flex-grow bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl shadow-xl border border-slate-700/50 relative overflow-hidden group-hover:border-primary-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary-500/20">
+                  <div className="flex-grow min-w-0 bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-xl sm:rounded-2xl shadow-xl border border-slate-700/50 relative overflow-hidden group-hover:border-primary-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary-500/20">
                     {/* Shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                     
                     {/* Accent border */}
                     <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${activity.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                     
-                    <div className="relative z-10 p-8">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div>
-                          <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3 group-hover:text-primary-300 transition-colors">
+                    <div className="relative z-10 p-4 sm:p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4">
+                        <div className="min-w-0">
+                          <h3 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white mb-2 sm:mb-3 group-hover:text-primary-300 transition-colors leading-tight">
                             {activity.organization}
                           </h3>
-                          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm`}>
-                            <div className={`w-2 h-2 bg-gradient-to-r ${activity.gradient} rounded-full`}></div>
-                            <span className="text-sm font-bold text-primary-300">
+                          <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm`}>
+                            <div className={`w-2 h-2 bg-gradient-to-r ${activity.gradient} rounded-full flex-shrink-0`}></div>
+                            <span className="text-xs sm:text-sm font-bold text-primary-300">
                               {activity.role}
                             </span>
                           </div>
                         </div>
-                        <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/70 border border-slate-700/70 backdrop-blur-sm">
-                          <div className={`w-2 h-2 bg-primary-400 rounded-full animate-pulse`}></div>
-                          <span className="text-sm font-semibold text-gray-200">{activity.period}</span>
+                        <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-slate-900/70 border border-slate-700/70 backdrop-blur-sm self-start">
+                          <div className={`w-2 h-2 bg-primary-400 rounded-full animate-pulse flex-shrink-0`}></div>
+                          <span className="text-xs sm:text-sm font-semibold text-gray-200">{activity.period}</span>
                         </div>
                       </div>
                     </div>

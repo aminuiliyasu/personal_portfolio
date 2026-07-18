@@ -48,12 +48,12 @@ const Projects = () => {
           </span>
         </h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => {
             return (
               <div 
                 key={index} 
-                className="bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-3xl shadow-2xl border border-slate-700/50 relative overflow-hidden group hover:shadow-primary-500/20 hover:border-primary-500/50 transition-all duration-500 transform hover:-translate-y-2"
+                className="bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/50 relative overflow-hidden group hover:shadow-primary-500/20 hover:border-primary-500/50 transition-all duration-500 transform sm:hover:-translate-y-2"
               >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
@@ -61,23 +61,23 @@ const Projects = () => {
                 {/* Accent border top */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="relative z-10 p-10">
+                <div className="relative z-10 p-5 sm:p-8 md:p-10">
                   {/* Header with Icon */}
-                  <div className="flex items-start gap-6 mb-8 pb-8 border-b border-slate-700">
+                  <div className="flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-slate-700">
                     <div className="relative flex-shrink-0">
                       <div className="absolute inset-0 bg-primary-500/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-                      <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                         <div className="text-white">
-                          {React.cloneElement(project.icon, { className: "text-white", size: 40 })}
+                          {React.cloneElement(project.icon, { className: "text-white", size: 28 })}
                         </div>
                       </div>
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2 group-hover:text-primary-300 transition-colors leading-tight">
+                    <div className="flex-grow min-w-0">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-2 group-hover:text-primary-300 transition-colors leading-tight">
                         {project.title}
                       </h3>
                       {project.focus && (
-                        <p className="text-sm text-primary-400 font-semibold mt-1">
+                        <p className="text-xs sm:text-sm text-primary-400 font-semibold mt-1">
                           Focus: {project.focus}
                         </p>
                       )}
@@ -85,11 +85,11 @@ const Projects = () => {
                   </div>
                   
                   {/* Description */}
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                     {project.description.map((point, pointIndex) => (
                       <li
                         key={pointIndex}
-                        className="text-gray-300 flex items-start gap-4 text-base leading-relaxed"
+                        className="text-gray-300 flex items-start gap-3 sm:gap-4 text-sm sm:text-base leading-relaxed"
                       >
                         <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{point}</span>
@@ -98,11 +98,11 @@ const Projects = () => {
                   </ul>
                   
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 bg-primary-600/10 text-primary-300 rounded-lg text-sm font-semibold border border-primary-500/30 backdrop-blur-sm group-hover:bg-primary-600/20 group-hover:border-primary-500/50 transition-all"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-600/10 text-primary-300 rounded-lg text-xs sm:text-sm font-semibold border border-primary-500/30 backdrop-blur-sm group-hover:bg-primary-600/20 group-hover:border-primary-500/50 transition-all"
                       >
                         {tech}
                       </span>
@@ -110,12 +110,12 @@ const Projects = () => {
                   </div>
                   
                   {/* Links */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
+                      className="group/link inline-flex items-center justify-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-5 sm:px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
                     >
                       <FaLink />
                       <span>GitHub</span>
@@ -126,7 +126,7 @@ const Projects = () => {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/link inline-flex items-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
+                        className="group/link inline-flex items-center justify-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-5 sm:px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
                       >
                         <FaExternalLinkAlt />
                         <span>Live Site</span>

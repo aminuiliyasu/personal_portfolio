@@ -50,42 +50,42 @@ const Experience = () => {
                 {/* Accent border top */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative z-10 p-10 md:p-12">
+                <div className="relative z-10 p-6 sm:p-10 md:p-12">
                   {/* Header Section */}
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8 pb-8 border-b border-slate-700">
-                    <div className="flex items-start gap-6">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-slate-700">
+                    <div className="flex items-start gap-4 sm:gap-6 min-w-0">
                       {/* Icon */}
                       <div className="relative flex-shrink-0">
                         <div className="absolute inset-0 bg-primary-500/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-                        <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-5 rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                          <FaBriefcase className="text-white" size={32} />
+                        <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                          <FaBriefcase className="text-white" size={24} />
                         </div>
                       </div>
 
                       {/* Role + Company */}
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3 group-hover:text-primary-300 transition-colors leading-tight">
+                      <div className="min-w-0">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-3 group-hover:text-primary-300 transition-colors leading-tight">
                           {exp.role}
                         </h3>
-                        <div className="flex flex-wrap items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                           {exp.companyUrl ? (
                             <a
                               href={exp.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm hover:bg-primary-600/20 hover:border-primary-500/50 transition-all group/link"
+                              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm hover:bg-primary-600/20 hover:border-primary-500/50 transition-all group/link"
                             >
                               <FaBuilding className="text-primary-300 text-sm" />
                               <span className="text-sm font-bold text-primary-300">{exp.company}</span>
                               <FaExternalLinkAlt className="text-primary-300/70 text-xs group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                             </a>
                           ) : (
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm">
+                            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-primary-600/10 border border-primary-500/30 backdrop-blur-sm">
                               <FaBuilding className="text-primary-300 text-sm" />
                               <span className="text-sm font-bold text-primary-300">{exp.company}</span>
                             </div>
                           )}
-                          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/70 border border-slate-700/70 backdrop-blur-sm">
+                          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-slate-900/70 border border-slate-700/70 backdrop-blur-sm">
                             <FaMapMarkerAlt className="text-primary-400 text-sm" />
                             <span className="text-sm font-semibold text-gray-200">{exp.location}</span>
                           </div>
@@ -94,18 +94,18 @@ const Experience = () => {
                     </div>
 
                     {/* Date Badge */}
-                    <div className="flex items-center gap-3 text-primary-300 font-semibold text-base bg-primary-600/10 px-5 py-3 rounded-xl border border-primary-500/20 backdrop-blur-sm flex-shrink-0">
+                    <div className="flex items-center gap-2 sm:gap-3 text-primary-300 font-semibold text-sm sm:text-base bg-primary-600/10 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-primary-500/20 backdrop-blur-sm flex-shrink-0 self-start">
                       <FaCalendarAlt className="text-primary-300" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
 
                   {/* Highlights */}
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                     {exp.highlights.map((point, i) => (
                       <li
                         key={i}
-                        className="text-gray-300 flex items-start gap-4 text-base leading-relaxed"
+                        className="text-gray-300 flex items-start gap-3 sm:gap-4 text-sm sm:text-base leading-relaxed"
                       >
                         <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{point}</span>
@@ -114,11 +114,11 @@ const Experience = () => {
                   </ul>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {exp.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-4 py-2 bg-primary-600/10 text-primary-300 rounded-lg text-sm font-semibold border border-primary-500/30 backdrop-blur-sm group-hover:bg-primary-600/20 group-hover:border-primary-500/50 transition-all"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-600/10 text-primary-300 rounded-lg text-xs sm:text-sm font-semibold border border-primary-500/30 backdrop-blur-sm group-hover:bg-primary-600/20 group-hover:border-primary-500/50 transition-all"
                       >
                         {tech}
                       </span>
