@@ -13,7 +13,10 @@ const Education = () => {
     'Computer Architecture',
     'Web Services',
     'Agile Methodologies',
-    'Information Systems & Control'
+    'Information Systems & Control',
+    'Distributed Systems',
+    'Software Testing',
+    'IT Security'
   ]
 
   return (
@@ -82,7 +85,7 @@ const Education = () => {
                 {/* Date Badge */}
                 <div className="flex items-center gap-2 sm:gap-3 text-primary-300 font-semibold text-sm sm:text-lg bg-primary-600/10 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-primary-500/20 backdrop-blur-sm self-start">
                   <FaCalendarAlt className="text-primary-300 flex-shrink-0" />
-                  <span>Aug 2022 – Jan 2026</span>
+                  <span>Sep 2022 – Jan 2026</span>
                 </div>
               </div>
               

@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 sm:h-20">
           <div className="flex-shrink-0 min-w-0 pr-3">
             <a href="#home" className="group relative block text-base sm:text-lg md:text-xl font-extrabold text-primary-400 hover:text-primary-300 transition-colors truncate">
-              <span className="relative z-10 hidden sm:inline">Computer Science Engineering</span>
+              <span className="relative z-10 hidden sm:inline">Aminu Iliyasu</span>
               <span className="relative z-10 sm:hidden">Aminu Iliyasu</span>
             </a>
           </div>

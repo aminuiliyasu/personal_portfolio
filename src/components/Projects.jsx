@@ -1,13 +1,42 @@
 import React from 'react'
-import { FaLink, FaExternalLinkAlt, FaCloud, FaShoppingCart } from 'react-icons/fa'
+import { FaLink, FaExternalLinkAlt, FaCloud, FaShoppingCart, FaStore } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
     {
+      title: 'Tasko — Services & Ride Marketplace',
+      description: [
+        'Two-sided marketplace for home services and rides, live in Abuja and Katsina on iOS and the web (Android pending), shipping from one TypeScript monorepo with shared UI, types and API packages.',
+        'NestJS + Prisma/PostgreSQL backend with escrow payments (Flutterwave), double-entry ledger, KYC with AWS Rekognition face match, live GPS ride tracking over SSE, and in-app Agora voice/video calls.',
+        'Production Docker Compose stack behind Caddy TLS with GitHub Actions CI/CD, health-checked deploys, scripted backups and a one-click server recovery workflow.'
+      ],
+      technologies: [
+        'TypeScript',
+        'NestJS',
+        'Next.js 15',
+        'Capacitor',
+        'PostgreSQL',
+        'Prisma',
+        'Redis',
+        'Flutterwave',
+        'AWS',
+        'Docker',
+        'Agora RTC'
+      ],
+      icon: <FaStore className="text-primary-600" size={32} />,
+      link: 'https://tasko.ng',
+      liveUrl: 'https://app.tasko.ng',
+      extraLinks: [
+        { label: 'Pro App', url: 'https://pro.tasko.ng' },
+        { label: 'Ops Console', url: 'https://admin.tasko.ng' }
+      ],
+      focus: 'Full-Stack Marketplace, Mobile & Real-Time Systems'
+    },
+    {
       title: 'Cloud Atlas — AWS Infrastructure Visualizer',
       description: [
         'Designed and shipped a production AWS infrastructure intelligence platform that discovers account resources via AWS APIs, correlates Terraform state for managed vs unmanaged drift, attributes Cost Explorer spend, and surfaces delete-impact and public-exposure risk in one operational view.',
-        'Containerized the full stack with a multi-stage Docker build and deployed on Amazon ECS (Fargate) from Amazon ECR behind an Application Load Balancer with ACM-managed TLS certificates and a custom HTTPS domain (Hostinger DNS to ALB).',
+        'Containerized the full stack with a multi-stage Docker build and deployed on Amazon ECS (Fargate) from Amazon ECR behind an Application Load Balancer with ACM-managed TLS certificates and a custom HTTPS domain.',
         'Implemented session-scoped credential handling so customer AWS keys remain in memory only (never persisted to disk or a database), aligned with least-privilege read-only IAM usage for safe cross-account scanning.'
       ],
       technologies: ['Python', 'FastAPI', 'Docker', 'AWS ECS Fargate', 'ECR', 'ALB', 'ACM', 'IAM'],
@@ -20,8 +49,8 @@ const Projects = () => {
       title: 'E-Commerce Platform for DevOps Practice',
       description: [
         'Built an end-to-end e-commerce platform as a Spring Boot modular monolith (user, catalog, cart, order, payment, notification, admin) with customer and admin web apps, JWT authentication, and polyglot persistence (MySQL, MongoDB, Redis, RabbitMQ).',
-        'Authored reusable Terraform modules and dev/staging/prod environments for a production-shaped AWS design (VPC, security groups, EKS, RDS, ElastiCache, Amazon MQ, ALB, S3, IAM, ACM, CloudFront, WAF), separating practice runtime cost from target architecture.',
-        'Deployed the full stack to AWS EC2 with Docker Compose and Caddy (TLS), configured custom-domain DNS for HTTPS, and published a live customer site at ecommerce.aminuiliyasu.com with open user registration and an isolated admin surface.'
+        'Authored reusable Terraform modules and dev/staging/prod environments for a production-shaped AWS design (VPC, security groups, EKS, RDS, ElastiCache, Amazon MQ, ALB, S3, IAM, ACM, CloudFront, WAF).',
+        'Deployed the full stack to AWS EC2 with Docker Compose and Caddy (TLS), configured custom-domain DNS for HTTPS, and published a live customer site with open user registration and an isolated admin surface.'
       ],
       technologies: ['Java', 'Spring Boot', 'Docker', 'Terraform', 'AWS EC2', 'MySQL', 'MongoDB', 'Redis', 'RabbitMQ'],
       icon: <FaShoppingCart className="text-primary-600" size={32} />,
@@ -53,7 +82,7 @@ const Projects = () => {
             return (
               <div 
                 key={index} 
-                className="bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/50 relative overflow-hidden group hover:shadow-primary-500/20 hover:border-primary-500/50 transition-all duration-500 transform sm:hover:-translate-y-2"
+                className={`bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/50 relative overflow-hidden group hover:shadow-primary-500/20 hover:border-primary-500/50 transition-all duration-500 transform sm:hover:-translate-y-2 ${index === 0 ? 'lg:col-span-2' : ''}`}
               >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
@@ -118,7 +147,7 @@ const Projects = () => {
                       className="group/link inline-flex items-center justify-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-5 sm:px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
                     >
                       <FaLink />
-                      <span>GitHub</span>
+                      <span>{index === 0 ? 'Marketing Site' : 'GitHub'}</span>
                       <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                     </a>
                     {project.liveUrl && (
@@ -129,10 +158,23 @@ const Projects = () => {
                         className="group/link inline-flex items-center justify-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-5 sm:px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
                       >
                         <FaExternalLinkAlt />
-                        <span>Live Site</span>
+                        <span>{index === 0 ? 'Client App' : 'Live Site'}</span>
                         <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                       </a>
                     )}
+                    {project.extraLinks?.map((extra, extraIndex) => (
+                      <a
+                        key={extraIndex}
+                        href={extra.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/link inline-flex items-center justify-center gap-3 text-primary-400 hover:text-primary-300 font-bold transition-all bg-primary-600/10 px-5 sm:px-6 py-3 rounded-xl border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50"
+                      >
+                        <FaExternalLinkAlt />
+                        <span>{extra.label}</span>
+                        <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

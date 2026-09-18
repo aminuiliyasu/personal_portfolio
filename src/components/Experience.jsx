@@ -4,17 +4,51 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaBuilding, FaExternalLinkA
 const Experience = () => {
   const experiences = [
     {
+      role: 'Co-Founder & Software Engineer',
+      company: 'Tasko',
+      companyUrl: 'https://tasko.ng',
+      location: 'Abuja, Nigeria (Remote)',
+      period: 'March 2024 – Present',
+      highlights: [
+        'Built and launched a two-sided marketplace for home services and rides, live in Abuja and Katsina on iOS and the web (Android release pending); the API, client app, pro app, operations console and marketing site all ship from one TypeScript monorepo with shared UI, types and API packages.',
+        'Designed the NestJS + Prisma/PostgreSQL backend with role-scoped HttpOnly sessions, phone/email OTP, Firebase sign-in, Redis-backed rate limiting, Zod-validated inputs and audit logging on every money and KYC mutation.',
+        'Shipped escrow payments on Flutterwave with a double-entry ledger, payouts, refunds and an operations dispute console, so clients pay into hold and pros are released on completion.',
+        'Implemented pro verification: NIN encrypted at rest with AES-256-GCM, live face match through AWS Rekognition, paid verification checkout, and signed S3 media URLs so no upload is ever publicly readable.',
+        'Built live ride tracking end-to-end: app-wide driver GPS publisher, server-side Google Directions routing with ETA that counts down along the road, Redis pub/sub fan-out to SSE streams, and a smoothed, heading-aware vehicle marker across iOS, Android and web.',
+        'Added in-app voice and video calls on Agora RTC with a call state machine shared by web and native, masked phone numbers, and an automated end-to-end call test suite.',
+        'Run production on a Docker Compose stack behind Caddy TLS on a Linux VPS; GitHub Actions CI (typecheck, lint, tests) on every push, push-to-production deploy with health checks, scripted database backups and a one-click server recovery workflow.'
+      ],
+      liveLinks: [
+        { label: 'tasko.ng', url: 'https://tasko.ng' },
+        { label: 'app.tasko.ng', url: 'https://app.tasko.ng' },
+        { label: 'pro.tasko.ng', url: 'https://pro.tasko.ng' },
+        { label: 'admin.tasko.ng', url: 'https://admin.tasko.ng' }
+      ],
+      technologies: [
+        'TypeScript',
+        'NestJS',
+        'Prisma',
+        'PostgreSQL',
+        'Next.js',
+        'Capacitor',
+        'Redis',
+        'Flutterwave',
+        'AWS Rekognition',
+        'Agora RTC',
+        'Docker',
+        'GitHub Actions'
+      ]
+    },
+    {
       role: 'Software Engineer — Cloud & DevOps (Contract)',
       company: 'Aurora Oriental',
       companyUrl: 'https://auroraoriental.io',
       location: 'Remote',
-      period: 'February 2026 – Present',
+      period: 'February 2024 – Present',
       highlights: [
-        'Shipped a production split-deployment architecture by hosting frontend assets on a CDN and running containerized Spring Boot backends on AWS ECS, with secrets injected through CI/CD.',
-        'Cut deployment cycle time from 35 to 8 minutes by building GitHub Actions CI/CD pipelines that automated Java API testing, builds, and frontend lint/production releases.',
-        'Standardized releases across 4 microservices by engineering multi-stage Docker images and publishing to AWS ECR/ECS with consistent runtime configuration.',
-        'Processed monthly payment and shipping events with zero frontend credential exposure by integrating Stripe, Firebase, Billingo, and GLS/FoxPost webhooks in isolated backend services.',
-        'Managed AWS Route 53 DNS for 3 production domains, including domain verification and TXT records for external service integrations.'
+        'Cut deployment time from 35 to 8 minutes with GitHub Actions pipelines that test, build and release 4 containerized Spring Boot services to AWS ECS/Fargate with secrets injected at deploy time.',
+        'Moved frontend assets to a CDN and the Java APIs to ECS in a split deployment; integrated Stripe, Firebase, Billingo and GLS/FoxPost webhooks in isolated backend services with zero frontend credential exposure.',
+        'Own Route 53 DNS for 3 production domains, including verification and TXT records for third-party services.'
       ],
       technologies: ['GitHub Actions', 'Docker', 'Spring Boot', 'AWS ECS', 'AWS ECR', 'AWS Route 53', 'CDN', 'Stripe', 'Firebase', 'Billingo']
     }
@@ -112,6 +146,24 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Live links */}
+                  {exp.liveLinks && (
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
+                      {exp.liveLinks.map((link, i) => (
+                        <a
+                          key={i}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-900/70 text-primary-300 rounded-lg text-xs sm:text-sm font-semibold border border-primary-500/30 hover:bg-primary-600/20 hover:border-primary-500/50 transition-all"
+                        >
+                          <FaExternalLinkAlt className="text-xs" />
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 sm:gap-3">

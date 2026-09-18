@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCode, FaCloud, FaServer, FaCog } from 'react-icons/fa'
+import { FaCode, FaMobileAlt, FaCloud, FaRocket } from 'react-icons/fa'
 
 const About = () => {
   return (
@@ -25,17 +25,19 @@ const About = () => {
             <div className="relative z-10 space-y-6 sm:space-y-8">
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                  <strong className="text-primary-400 text-xl sm:text-2xl font-bold">B.Sc. Computer Science Engineering</strong> graduate (GPA 4.8/5.0) with 
-                  hands-on production AWS experience shipping containerized Spring Boot services, CI/CD pipelines, and 
-                  Terraform infrastructure-as-code.
+                  Software engineer and co-founder of{' '}
+                  <strong className="text-primary-400 font-bold">Tasko</strong>, a services and ride marketplace
+                  live in Nigeria on iOS and the web, with Android builds ready for release. I own the whole stack:
+                  a NestJS/PostgreSQL API with escrow payments and KYC, Next.js apps for clients, pros and operations,
+                  Capacitor mobile shells, real-time GPS tracking and in-app calls, and the CI/CD and infrastructure
+                  that ships it daily.
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Designed and publicly deployed a full-stack e-commerce platform (modular Java backend, customer/admin 
-                  web apps, Docker) with a cost-controlled live AWS runtime and an EKS-oriented Terraform target architecture 
-                  (VPC, RDS, ElastiCache, ALB, CloudFront).
+                  Previously built AWS deployment pipelines and containerized Java services for an e-commerce client.
+                  Computer Science Engineering graduate (GPA 4.8 / 5.0).
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Seeking <strong className="text-primary-400 font-bold">Cloud Engineer, DevOps Engineer, and SRE</strong> roles.
+                  Looking for a <strong className="text-primary-400 font-bold">Software Engineer</strong> role on a team that ships to real users.
                 </p>
               </div>
               
@@ -47,7 +49,16 @@ const About = () => {
                       <FaCode className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Software Engineering</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Full-Stack</p>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
+                    <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
+                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
+                      <FaMobileAlt className="text-white" size={28} />
+                    </div>
+                  </div>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Mobile</p>
                 </div>
                 <div className="text-center group cursor-pointer">
                   <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
@@ -56,25 +67,16 @@ const About = () => {
                       <FaCloud className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Cloud Infrastructure</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Cloud & DevOps</p>
                 </div>
                 <div className="text-center group cursor-pointer">
                   <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
                     <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
-                      <FaServer className="text-white" size={28} />
+                      <FaRocket className="text-white" size={28} />
                     </div>
                   </div>
-                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">System Architecture</p>
-                </div>
-                <div className="text-center group cursor-pointer">
-                  <div className="relative mx-auto w-16 h-16 sm:w-24 sm:h-24 mb-3 sm:mb-5">
-                    <div className="absolute inset-0 bg-primary-600/20 rounded-2xl blur-xl group-hover:bg-primary-500/30 transition-colors"></div>
-                    <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-500/50 h-full">
-                      <FaCog className="text-white" size={28} />
-                    </div>
-                  </div>
-                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">DevOps Automation</p>
+                  <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-primary-400 transition-colors leading-snug">Product Shipping</p>
                 </div>
               </div>
             </div>

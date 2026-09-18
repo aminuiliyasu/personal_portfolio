@@ -4,9 +4,9 @@ import { FaUniversity, FaUsers, FaHandshake, FaCode, FaRocket } from 'react-icon
 const Activities = () => {
   const activities = [
     {
-      organization: 'MIK Hub',
+      organization: 'MIK Hub (Faculty Student Club)',
       role: 'Founding Member',
-      period: 'January 2025 - January 2026',
+      period: 'January 2025 – January 2026',
       icon: <FaRocket className="text-white" size={24} />,
       gradient: 'from-primary-400 to-primary-500',
       bg: 'from-primary-400/20 to-primary-500/20'
@@ -14,31 +14,31 @@ const Activities = () => {
     {
       organization: 'University of Pécs',
       role: 'International Student Ambassador',
-      period: 'October 2024 - October 2025',
+      period: 'October 2024 – October 2025',
       icon: <FaUniversity className="text-white" size={24} />,
       gradient: 'from-primary-500 to-primary-600',
       bg: 'from-primary-500/20 to-primary-600/20'
     },
     {
-      organization: 'National Union of Students in Hungary (HÖOK)',
-      role: 'International Student Mentor',
-      period: 'August 2024 - August 2025',
-      icon: <FaHandshake className="text-white" size={24} />,
-      gradient: 'from-primary-500 via-primary-600 to-primary-700',
-      bg: 'from-primary-500/20 via-primary-600/20 to-primary-700/20'
-    },
-    {
-      organization: 'Google Developer Student Club (GDSC)',
+      organization: 'Google Developer Student Club (GDSC), Pécs',
       role: 'Logistics Team Lead',
-      period: 'August 2024 - August 2025',
+      period: 'August 2024 – August 2025',
       icon: <FaCode className="text-white" size={24} />,
       gradient: 'from-primary-600 to-primary-800',
       bg: 'from-primary-600/20 to-primary-800/20'
     },
     {
+      organization: 'National Union of Students in Hungary (HÖOK)',
+      role: 'International Student Mentor',
+      period: 'August 2024 – August 2025',
+      icon: <FaHandshake className="text-white" size={24} />,
+      gradient: 'from-primary-500 via-primary-600 to-primary-700',
+      bg: 'from-primary-500/20 via-primary-600/20 to-primary-700/20'
+    },
+    {
       organization: 'Erasmus Student Network (ESN Pécs)',
       role: 'Social Committee Member',
-      period: 'September 2024 - June 2025',
+      period: 'September 2024 – June 2025',
       icon: <FaUsers className="text-white" size={24} />,
       gradient: 'from-primary-600 to-primary-700',
       bg: 'from-primary-600/20 to-primary-700/20'

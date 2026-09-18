@@ -50,17 +50,18 @@ const Hero = () => {
           <div className="mb-8 sm:mb-10 animate-fade-in-up animation-delay-200 px-1">
             <div className="inline-block px-4 sm:px-6 py-2 rounded-full bg-primary-600/20 border border-primary-500/30 mb-3 sm:mb-4 max-w-full">
               <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 leading-snug">
-                Cloud & DevOps Engineer
+                Software Engineer
               </h2>
             </div>
             <p className="text-base sm:text-xl md:text-2xl text-gray-300 font-medium mt-3 sm:mt-4 px-2">
-              Computer Science Engineering · AWS · Kubernetes · SRE
+              Full-Stack · Mobile · Cloud
             </p>
           </div>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed px-1">
-            B.Sc. Computer Science Engineering graduate (GPA 4.8/5.0) with production AWS experience shipping 
-            containerized Spring Boot services, CI/CD pipelines, and Terraform infrastructure-as-code. Seeking Cloud, DevOps, and SRE roles.
+            Co-founder of Tasko, a services and ride marketplace live in Nigeria. I own the full stack —
+            NestJS APIs, Next.js apps, Capacitor mobile, real-time tracking, payments, and CI/CD —
+            and I&apos;m looking for a Software Engineer role on a team that ships to real users.
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 animate-fade-in-up animation-delay-600 w-full max-w-lg sm:max-w-none mx-auto">
@@ -86,7 +87,7 @@ const Hero = () => {
               <div className="bg-primary-600/20 p-2 rounded-lg flex-shrink-0">
                 <FaMapMarkerAlt className="text-primary-400" />
               </div>
-              <span className="font-medium text-sm sm:text-base">Pécs, Hungary</span>
+              <span className="font-medium text-sm sm:text-base">Budapest, Hungary</span>
             </div>
           </div>
           

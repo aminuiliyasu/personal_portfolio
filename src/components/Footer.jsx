@@ -24,7 +24,7 @@ const Footer = () => {
               Aminu Iliyasu
             </h3>
             <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
-              B.Sc. Computer Science Engineering graduate with production AWS experience. Seeking Cloud, DevOps, and SRE roles.
+              Software Engineer — Full-Stack, Mobile & Cloud. Co-founder of Tasko. Looking for a role on a team that ships to real users.
             </p>
           </div>
           
@@ -51,7 +51,7 @@ const Footer = () => {
                 <div className="bg-primary-600/20 p-2.5 sm:p-3 rounded-lg border border-primary-500/30 flex-shrink-0">
                   <FaMapMarkerAlt className="text-primary-400" />
                 </div>
-                <span className="font-medium text-sm sm:text-base">Pécs, Hungary</span>
+                <span className="font-medium text-sm sm:text-base">Budapest, Hungary</span>
               </div>
             </div>
           </div>
